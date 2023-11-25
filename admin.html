@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Panel de Administración</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <nav>
@@ -14,17 +16,17 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
     <section class="admin-section">
       <h1>Panel de Administración</h1>
       <div class="admin-buttons">
-        <button>Registrar Libro</button>
-        <button>Registrar Usuario</button>
-        <button>Prestar Libro</button>
-        <button>Devolver Libro</button>
-        <button>Eliminar Libro</button>
-        <button>Eliminar Usuario</button>
+        <button onclick="mostrarFormulario('form-libro')">Registrar Libro</button>
+        <button onclick="mostrarFormulario('form-usuario')">Registrar Usuario</button>
+        <button onclick="mostrarFormulario('form-prestamo')">Prestar Libro</button>
+        <button onclick="mostrarFormulario('form-devolucion')">Devolver Libro</button>
+        <button onclick="mostrarFormulario('form-eliminar-libro')">Eliminar Libro</button>
+        <button onclick="mostrarFormulario('form-eliminar-usuario')">Eliminar Usuario</button>
       </div>
     </section>
   </main>
@@ -33,5 +35,19 @@
     <p class="footer-left">&copy; Gisell Gonzalez</p>
     <a href="#" class="footer-right">Ir para arriba</a>
   </footer>
+  <script>
+    function mostrarFormulario(formularioId) {
+      // Ocultar todos los formularios
+      var formularios = document.getElementsByClassName('formulario');
+      for (var i = 0; i < formularios.length; i++) {
+        formularios[i].style.display = 'none';
+      }
+
+      // Mostrar el formulario correspondiente al ID recibido
+      var formularioAMostrar = document.getElementById(formularioId);
+      formularioAMostrar.style.display = 'block';
+    }
+  </script>
 </body>
+
 </html>
