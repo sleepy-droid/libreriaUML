@@ -11,8 +11,8 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">Página Principal</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="home.html">Página Principal</a></li>
+        <li><a href="#">Admin</a></li>
       </ul>
     </nav>
   </header>
@@ -22,8 +22,16 @@
       <h1>Panel de Administración</h1>
       <div class="admin-buttons">
         <button onclick="mostrarFormulario('form-libro')">Registrar Libro</button>
-
-        <form action="procesar_registro.php" method="post">
+        <button onclick="mostrarFormulario('form-usuario')">Registrar Usuario</button>
+        <button onclick="mostrarFormulario('form-prestamo')">Prestar Libro</button>
+        <button onclick="mostrarFormulario('form-devolucion')">Devolver Libro</button>
+        <button onclick="mostrarFormulario('form-eliminar-libro')">Eliminar Libro</button>
+        <button onclick="mostrarFormulario('form-eliminar-usuario')">Eliminar Usuario</button>
+      </div>
+    </section>
+    <section>
+      <div>
+        <form action="procesar_registro.php" method="post" name="form-libro">
           <label for="nombre">Nombre del libro:</label><br>
           <input type="text" id="nombre" name="nombre"><br><br>
 
@@ -47,17 +55,11 @@
 
           <input type="submit" value="Registrar libro">
         </form>
-
-        <button onclick="mostrarFormulario('form-usuario')">Registrar Usuario</button>
-        <button onclick="mostrarFormulario('form-prestamo')">Prestar Libro</button>
-        <button onclick="mostrarFormulario('form-devolucion')">Devolver Libro</button>
-        <button onclick="mostrarFormulario('form-eliminar-libro')">Eliminar Libro</button>
-        <button onclick="mostrarFormulario('form-eliminar-usuario')">Eliminar Usuario</button>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer style="margin-top: 30px;">
     <p class="footer-left">&copy; Gisell Gonzalez</p>
     <a href="#" class="footer-right">Ir para arriba</a>
   </footer>
