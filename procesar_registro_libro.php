@@ -1,5 +1,11 @@
 <?php
 include 'conexion_base_datos.php';
+insertarDatos();
+actualizarDatos();
+mostrarDatos();
+borrarDatos();
+leerFilas();
+
 // Recibir los datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
