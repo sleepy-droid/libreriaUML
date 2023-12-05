@@ -1,5 +1,5 @@
 <?php
-include "BaseDeDatos.php";
+include "conexion_base_datos.php";
 function insertarDatos()
 {
     // Verificar si se ha recibido información del formulario
