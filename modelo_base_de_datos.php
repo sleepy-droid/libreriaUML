@@ -8,11 +8,15 @@ function insertarDatos()
         global $connection;
 
         // Asignar los parámetros recibidos del formulario
-        $username = $_POST['username'];
-        $contrasena = $_POST['contrasena'];
+        $nombre = $_POST['nombre'];
+        $autor = $_POST['autor'];
+        $genero = $_POST['genero'];
+        $anio = $_POST['anio'];
+        $STATUS_LIBRO = $_POST['STATUS_LIBRO'];
+
 
         // Crear la variable $query con el script de inserción
-        $query = "INSERT INTO usuarios(username, contrasena) VALUES ('$username', '$contrasena')";
+        $query = "INSERT INTO libros(nombre, autor, genero, anio, STATUS_LIBRO) VALUES ('$nombre', '$autor', '$genero', '$anio', '$STATUS_LIBRO')";
 
         // Ejecutar el query y asignar el resultado a $result
         $result = mysqli_query($connection, $query);

@@ -1,3 +1,11 @@
+<?php
+
+include 'modelo_base_de_datos';
+include 'procesar_registro_libro';
+include 'conexion_base_datos';
+
+insertarDatos();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,7 +19,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="home.html">Página Principal</a></li>
+        <li><a href="home.php">Página Principal</a></li>
         <li><a href="#">Admin</a></li>
       </ul>
     </nav>

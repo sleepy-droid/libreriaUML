@@ -1,3 +1,8 @@
+<?php
+
+include 'modelo_base_datos';
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +15,7 @@
     <nav>
       <ul>
         <li><a href="#">Página Principal</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="admin.php">Admin</a></li>
       </ul>
     </nav>
   </header>
